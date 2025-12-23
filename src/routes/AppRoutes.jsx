@@ -6,6 +6,11 @@ import MasterclassDetails from "../pages/masterclass/MasterclassDetails";
 import MyMasterclass from "../pages/masterclass/MyMasterclass";
 import AdminDashboard from "../pages/masterclass/AdminDashboard";
 
+import EventsLandingpage from "../pages/events/EventsLandingpage";
+import MyEvents from "../pages/events/MyEvents";
+import EventDetails from "../pages/events/EventDetails";
+import EventAdmin from "../pages/events/EventAdmin";
+
 const AppRoutes = () => {
   return (
     <Routes>
@@ -21,6 +26,11 @@ const AppRoutes = () => {
       <Route path="/mymasterclass" element={<MyMasterclass />} />
 
       <Route path="/masterclassadmin" element={<AdminDashboard />} />
+
+      <Route path="/events" element={<EventsLandingpage />} />
+      <Route path="/myevents" element={<MyEvents />} />
+      <Route path="/events/:eventPath" element={<EventDetails />} />
+      <Route path="/eventadmin" element={<EventAdmin />} />
     </Routes>
   );
 };
