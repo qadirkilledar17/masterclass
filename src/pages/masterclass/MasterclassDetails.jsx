@@ -20,14 +20,14 @@ import {
   Star,
 } from "lucide-react";
 
-const EventDetails = () => {
-  const { eventPath } = useParams();
+const MasterclassDetails = () => {
+  const { masterclassPath } = useParams();
   const navigate = useNavigate();
   const [isRegistering, setIsRegistering] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
 
   // Find the event based on URL path
-  const event = events.find((e) => e.path === eventPath) || events[0];
+  const event = events.find((e) => e.path === masterclassPath) || events[0];
 
   const handleRegister = () => {
     setIsRegistering(true);
@@ -41,7 +41,7 @@ const EventDetails = () => {
           JSON.stringify([...registered, event])
         );
       }
-      setTimeout(() => navigate("/myevents"), 2000);
+      setTimeout(() => navigate("/mymasterclass"), 2000);
     }, 1500);
   };
 
@@ -288,4 +288,4 @@ const EventDetails = () => {
   );
 };
 
-export default EventDetails;
+export default MasterclassDetails;

@@ -9,7 +9,7 @@ import {
   User,
 } from "lucide-react";
 
-const MyEvents = () => {
+const MyMasterclass = () => {
   const [myEvents, setMyEvents] = useState([]);
   const navigate = useNavigate();
 
@@ -30,7 +30,7 @@ const MyEvents = () => {
             src="/curvuplogo.png"
             alt="Curvup"
             className="h-7 cursor-pointer"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/masterclass")}
           />
           <div className="flex items-center gap-6">
             <Bell size={20} className="text-gray-400" />
@@ -52,7 +52,7 @@ const MyEvents = () => {
             </p>
           </div>
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/masterclass")}
             className="flex items-center gap-2 text-blue-600 font-bold hover:gap-3 transition-all"
           >
             Explore More <ArrowRight size={18} />
@@ -70,7 +70,7 @@ const MyEvents = () => {
               journey today.
             </p>
             <button
-              onClick={() => navigate("/")}
+              onClick={() => navigate("/masterclass")}
               className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-black hover:bg-black transition-all"
             >
               Browse Workshops
@@ -114,4 +114,4 @@ const MyEvents = () => {
   );
 };
 
-export default MyEvents;
+export default MyMasterclass;
